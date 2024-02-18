@@ -5,7 +5,7 @@ order: 4
 ---
 
 # Hello
-I'm Patrik Rönnlund and welcome to my personal blog where I share thoughts, notes and projects from my time working on client management, configuration manager, automations, Power BI reports and more. 
+I'm Patrik Rönnlund and this is my personal blog where I share thoughts, notes and projects from my time working on client management, configuration manager, automations, Power BI reports and more. 
 
 Reach out to me on any social media platform linked at the bottom left of the page if you're interested. 
 
