@@ -1,6 +1,6 @@
 # 📜 Version Control of Configuration Manager Task Sequences
+![Header](../assets/header.png)
 
-![[../_images/header.png]]
 ## 🌟 Introduction
 
 I have been searching for ways to document and compare task sequences in my environment. I often find myself making changes in one **test** version of a duplicated **main** task sequence used in production and then merging all changes back into main. This is easy enough with one or two changes, but for large overhauls (especially ones made over time or with multiple team members), it is easy to forget one change. 
@@ -18,20 +18,23 @@ The script's output can be used in two main ways:
 - **Direct Comparison**: You can compare two task sequences directly by examining the exported text files. This is useful for quickly identifying changes or discrepancies between different versions of a task sequence. I typically open two similar task sequences in Visual Studio Code (or Notepad++) and run the "compare active file with..." command, selecting both files:
 
 **References** *(applications, packages, boot image, task sequences, etc)*:
-![[../_images/references.png]]
+![Refrences](../assets/references.png)
+
 
 **Task sequence steps** differ:
-![[../_images/TSSteps.png]]
+![TS Steps](../assets/TSSteps.png)
+
 
 **Script hash** differ
-![[../_images/scripthash.png]]
+![Script Hash](../assets/scripthash.png)
 
 **Conditions** differ:
-![[../_images/conditions.png]]
+![Conditions](../assets/conditions.png)
+
 - **Commit History Tracing**: By pushing the output to a Git repository, you can leverage the commit history to trace the evolution of a task sequence over time. This provides a clear audit trail of what changes were made and when.
 
 In this example, the *Restart Computer* step was **disabled** between commits.
-![[../_images/CommitHistory.png]]
+![Commit History](../assets/CommitHistory.png)
 
 ## 📋 Prerequisites
 
