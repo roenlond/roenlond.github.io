@@ -7,10 +7,6 @@ tags: configmgr tasksequence task sequence version control versioncontrol git
 image:
  path: /assets/header.png
 ---
-
-# 📜 Version Control of Configuration Manager Task Sequences
-![Header](../assets/header.png)
-
 ## 🌟 Introduction
 
 I have been searching for ways to document and compare task sequences in my environment. I often find myself making changes in one **test** version of a duplicated **main** task sequence used in production and then merging all changes back into main. This is easy enough with one or two changes, but for large overhauls (especially ones made over time or with multiple team members), it is easy to forget one change. 
