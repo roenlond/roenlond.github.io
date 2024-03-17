@@ -1,6 +1,11 @@
 ---
 layout: post
 title:  "Version Control of Configuration Manager Task Sequences"
+date: 2024-03-17 22:00 +0100
+categories: ConfigMgr
+tags: configmgr tasksequence task sequence version control versioncontrol git
+image:
+ path: /assets/header.png
 ---
 
 # 📜 Version Control of Configuration Manager Task Sequences
