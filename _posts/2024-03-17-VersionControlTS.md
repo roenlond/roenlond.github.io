@@ -56,7 +56,7 @@ In this example, the *Restart Computer* step was **disabled** between commits.
 
 ## 💾 Installation
 
-1. Download or clone the script from my GitHub: https://github.com/roenlond/Export-CMTaskSequences
+1. Download or clone the script from my [GitHub Repo](https://github.com/roenlond/Export-CMTaskSequences)
 2. Place the script in a directory of your choice on the system with ConfigMgr console access.
 3. Set the execution policy to allow the script to run, which can be done via `Set-ExecutionPolicy`
     * If you would like to run it unattended, create a [scheduled task](https://lazyadmin.nl/powershell/how-to-create-a-powershell-scheduled-task/) on the system.
