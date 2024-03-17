@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Version Control of Configuration Manager Task Sequences"
+---
+
 # 📜 Version Control of Configuration Manager Task Sequences
 ![Header](../assets/header.png)
 
@@ -46,28 +51,12 @@ In this example, the *Restart Computer* step was **disabled** between commits.
 
 ## 💾 Installation
 
-1. Download the script from my GitHub: 
+1. Download or clone the script from my GitHub: https://github.com/roenlond/Export-CMTaskSequences
 2. Place the script in a directory of your choice on the system with ConfigMgr console access.
 3. Set the execution policy to allow the script to run, which can be done via `Set-ExecutionPolicy`
     * If you would like to run it unattended, create a [scheduled task](https://lazyadmin.nl/powershell/how-to-create-a-powershell-scheduled-task/) on the system.
 
 ## 🚀 Usage
-<details>
-<summary><b>Expand</b> to show all available parameters</summary>
-
-- **SMSProvider**: The mandatory parameter for the SMS provider's fully qualified domain name (FQDN). It is necessary for accessing task sequence data in ConfigMgr.
-- **RepoPath**: An optional string parameter representing the local path to your Git repository. By default, it is set to the directory from where the script is executed.
-- **OutputPath**: This optional string parameter determines the output directory for the exported task sequences. It defaults to a folder joined with `RepoPath` as its child path and named `CMTaskSequences`.
-- **ExclusionPath**: This parameter can either be a single string or an array of strings separated by commas. It allows you to exclude certain task sequences from export based on the paths where they are found within ConfigMgr. Exclusions can include wildcards (*) for more flexible exclusion criteria.
-- **FullExport**: This is a switch parameter that enables or disables the full export of all task sequences. When set, it ignores any previous export dates and exports every task sequence found in ConfigMgr.
-- **SpecificTaskSequence**: Another switch parameter that allows you to export a specific task sequence rather than using the "last run" date for determining which task sequences should be exported. This overrides the `FullExport` and `AfterDate` parameters when set.
-- **AfterDate**: This optional DateTime parameter lets you specify a specific date after which any modifications made to the task sequences will be exported. The default value is the current date minus seven days, and it allows you to override the "last run" date functionality for more control over what gets exported.
-- **UseGit**: This switch parameter determines whether to push the changes to a Git repository after the task sequences have been exported. By default, it is set to false.
-- **CustomCommitMessage**: A string parameter that sets the commit message for the Git repository when the `UseGit` flag is set to true. If you don't specify a custom commit message, it will automatically generate one with a list of all task sequences exported in this run.
-- **GitBranch**: This optional string parameter specifies the branch within your Git repository where the changes should be pushed. By default, it is set to 'main'.
-</details>
-______
-
 Default behaviour without pushing to git:
 
 ```Powershell
@@ -102,6 +91,10 @@ $params = @{
 
 .\Export-CMTaskSequences.ps1 @params
 ```
+
+All parameters are documented [in the script ](https://github.com/roenlond/Export-CMTaskSequences/blob/cdd569fb1a29c347433d1aa4ea727e2bdf0ae907/Export-CMTaskSequences.ps1#L21) in more detail. 
+
+<hr>
 
 #### Script steps
 The script will:
